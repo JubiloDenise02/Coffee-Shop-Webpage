@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=devise-width, initial-scal=1.0">
+
+    <title> Brew With Me </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+
+    <link rel="stylesheet" href="mystylesheet.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <i class='bx bx-menu menu-icon'></i>
+            <a href="#Home"><i class='bx bxs-coffee-bean home-icon'></i></i></a>
+            <span class="logoname">Brew With Me</span>
+            <i class='bx bx-cart-alt cart-icon'></i>
+        </div>
+
+        <div class="sidenavbar">
+            <div class="logo">
+                <i class='bx bxs-coffee-bean menu-icon'></i>
+                <span class="logoname">Brew With Me</span>
+            </div>
+
+            <div class="navbar-content">
+            <ul class="lists">
+                <li class="list">
+                    <a href="#Home" class="navlink">
+                        <i class='bx bx-home icon' ></i>
+                        <span class="link">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#Menu" class="navlink">
+                        <i class='bx bx-food-menu icon' ></i>
+                        <span class="link">Menu</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#Music" class="navlink">
+                        <i class='bx bxl-soundcloud icon'></i>
+                        <span class="link">Music</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#Job Offers" class="navlink">
+                        <i class='bx bx-briefcase-alt-2 icon' ></i>
+                        <span class="link">Job Offers</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#About Us" class="navlink">
+                        <i class='bx bx-info-circle icon'></i>
+                        <span class="link">About Us</span>
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="overlay"></section>
+
+        <script>
+            const navBar = document.querySelector("nav"),
+                menuBttns = document.querySelectorAll(".menu-icon")
+                overlay = document.querySelector(".overlay")
+
+            menuBttns.forEach(menuBttns => {
+                menuBttns.addEventListener("click", () => {
+                    navBar.classList.toggle("open");
+                });    
+            });
+
+            overlay.addEventListener("click", () => {
+                navBar.classList.toggle("open");
+            }); 
+
+        </script>
+    
+    
+    <section class="home" id="Home">
+        <h1> COME AND <span>BREW WITH ME</span></h1>
+        <h3> You've got a friend in coffee. </h3>
+        <p> Experience the great aroma that will make your day better.</p>
+    </section>
+
+    <section class="menu" id="Menu">
+        <h1 class="heading"> Our <span>Menu</span></h1>
+        <div class="square-container">
+
+            <div class="square">   
+                <img src="hotbrewed.jpg">
+                <div class="price">₱130.00 <span>₱140.00</span></div>
+                <h3>Hot Brewed Coffee</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="coldbrew.jpg">
+                <div class="price">₱155.00 <span>₱175.00</span></div>
+                <h3>Cold Brewed Coffee</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="saltedcaramel.jpg">
+                <div class="price">₱175.00 <span>₱190.00</span></div>
+                <h3>Salted Caramel Cold Brew</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="cappuccino.jpg">
+                <div class="price">₱145.00 <span>₱160.00</span></div>
+                <h3>Cappuccino</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="espresso.jpg">
+                <div class="price">₱145.00 <span>₱160.00</span></div>
+                <h3>Espresso</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="espressomacchiato.jpg">
+                <div class="price">₱170.00 <span>₱185.00</span></div>
+                <h3>Espresso Macchiato</h3>
+                <button>Add to Cart</button>
+            </div>
+    
+            <div class="square">   
+                <img src="icedcaramelmacchiato.jpg">
+                <div class="price">₱170.00 <span>₱185.00</span></div>
+                <h3>Iced Caramel Macchiato</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="icedamericano.jpg">
+                <div class="price">₱150.00 <span>₱165.00</span></div>
+                <h3>Iced Americano</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="icedesspresso.jpg">
+                <div class="price">₱170.00 <span>₱185.00</span></div>
+                <h3>Iced Espresso</h3>
+                <button>Add to Cart</button>
+            </div>
+    
+            <div class="square">   
+                <img src="icedvanillalatte.jpg">
+                <div class="price">₱180.00 <span>₱195.00</span></div>
+                <h3>Iced Vanilla Latte</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="icedcappuccino.jpg">
+                <div class="price">₱170.00 <span>₱185.00</span></div>
+                <h3>Iced Cappuccino</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="hotchocolate.jpg">
+                <div class="price">₱155.00 <span>₱170.00</span></div>
+                <h3>Hot Chocolate</h3>
+                <button>Add to Cart</button>
+            </div>
+            
+            <div class="square">   
+                <img src="icedchocolate.jpg">
+                <div class="price">₱170.00 <span>₱185.00</span></div>
+                <h3>Iced Chocolate Milk</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="caramelfrappuccino.jpg">
+                <div class="price">₱160.00 <span>₱175.00</span></div>
+                <h3>Caramel Frappuccino</h3>
+                <button>Add to Cart</button>
+            </div>
+    
+            <div class="square">   
+                <img src="mochafrappuccino.jpg">
+                <div class="price">₱160.00 <span>₱175.00</span></div>
+                <h3>Mocha Frappoccino</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="javachipfrappuccino.jpg">
+                <div class="price">₱175.00 <span>₱190.00</span></div>
+                <h3>Mocha Frappoccino</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="bananabread.jpg">
+                <div class="price">₱75.00 <span>₱85.00</span></div>
+                <h3>Banana Bread</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="belgianwaffle.jpg">
+                <div class="price">₱130.00 <span>₱140.00</span></div>
+                <h3>Belgian Waffle</h3>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="square">   
+                <img src="butterscotchbar.jpg">
+                <div class="price">₱110.00 <span>₱120.00</span></div>
+                <h3>Butterscotch Bar</h3>
+                <button>Add to Cart</button>
+            </div>
+    
+            <div class="square">   
+                <img src="chocolatepecanbar.jpg">
+                <div class="price">₱110.00 <span>₱120.00</span></div>
+                <h3>Chocolate Pecan Bar</h3>
+                <button>Add to Cart</button>
+            </div>
+    
+            <div class="square">   
+                <img src="maplesyruppancake.jpg">
+                <div class="price">₱120.00 <span>₱130.00</span></div>
+                <h3>Maple Syrup Pancake</h3>
+                <button>Add to Cart</button>
+            </div>
+        
+        </div>
+    </section>
+
+    <section class="music" id="Music">
+        
+            <h1 class="heading"> Best <span>Music</span></h1>
+            <h3> Perfect music for our Products:</h3>
+
+            <div class="square-container">
+
+                <div class="square">   
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3ywtudi0Pto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="square">   
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_kfi1T4z-KU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+
+    </section> 
+    
+    <section class="job" id="Job Offers">
+        <h1 class="heading"> Job <span>Offers</span></h1>
+        <h3>WE ARE HIRING!</h3>
+        <p> We are looking for:</p>
+        <div class="square-container">
+
+            <div class="square">   
+                <img src="diningcrew.jpg">
+                <h3>Dining Crew</h3>
+                <button>Apply</button>
+            </div>
+
+            <div class="square">   
+                <img src="barista.jpg">
+                <h3>Barista</h3>
+                <button>Apply</button>
+            </div>
+
+            <div class="square">   
+                <img src="cashier.jpg">
+                <h3>Cashier</h3>
+                <button>Apply</button>
+            </div>
+
+    </section>
+
+    <section class="about" id="About Us">
+        <h1 class="heading"><span>About Us</span></h1>
+        <h3>What Makes Our Coffee Special?</h3>
+        <h4>Not too small. Not too big.</h4>
+        <p align="justify"> 
+           It is not based in the size of a cup. Tastes matters.
+        </p>
+
+        <h4>Our coffee is just right. </h4>
+        <p align="justify">
+            We buy only from reputable farmers and millers at volumes equal to several hundred acres. We grade our coffees into different sizes and quality, throw out the lower quality beans and blind taste our grades and types individually to find the best roasting temperature that bring out the best taste for that specific size and coffee bean – different roasting temperatures for different coffee. We do this constantly to maintain a consistent and high-quality roast every time. 
+        </p>
+
+        <h3>Where and When Our Shop Started?</h3>
+        <p align="justify">
+            Our shop established since 2015 at 123 Centennial Road, Kawit, Cavite, Philippines.
+        </p>
+    </section>
+
+    <footer>
+
+        <div class="footerbottom">
+            <ul class="socialmeds">
+                <li><a href="#Facebook"> <i class='bx bxl-facebook-circle foot-icon'></i></a></li>
+                <li><a href="#Gmail"> <i class='bx bxl-gmail foot-icon'></i></a></li>
+                <li><a href="#Instagram"> <i class='bx bxl-instagram foot-icon'></i></a></li>
+            </ul>
+            <p>Copyright &copy;2015 BREWWITHME. designed by <span>DENISEIRA</span></p>
+        </div>
+            
+
+    </footer>
+
+</body>
+</html>

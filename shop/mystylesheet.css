@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --lightyellowbrown:#eec876
+    ;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    border: none;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, .25);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: var(--lightyellowbrown);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #f1d391;
+}
+
+html,body{
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:wheat;
+    box-shadow: 0 0 1px #443c2d;
+}
+
+nav .logo{
+    align-items: center;
+    display: flex;
+    margin: 0 24px;
+}
+
+.logo .menu-icon{
+    color: #473c23;
+    font-size: 35px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.logo .home-icon{
+    color: #473c23;
+    font-size: 35px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.logo .cart-icon{
+    color: #473c23;
+    font-size: 35px;
+    margin-left: 1100px;
+    cursor: pointer;
+}
+
+.logo .logoname{
+    color: #473c23;
+    font-size: 22px;
+    font-weight: 900;
+}
+nav .sidenavbar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 260px;   
+    padding: 20px 0;
+    background-color: wheat;
+    box-shadow: 0 5px 10px #443c2d;
+    transition: all 0.4s ease;
+}
+
+nav.open .sidenavbar{
+    left: 0;
+}
+
+.sidenavbar .navbar-content{
+    padding: 5px 16px;
+}
+
+.navbar-content .list{
+    list-style: none;
+}
+
+.list .navlink{
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.lists .navlink:hover{
+    background-color: #a78c53;
+}
+
+.navlink .icon{
+    margin-right: 16px;
+    font-size: 30px;
+    color:#473c23;
+}
+
+.navlink .link{
+    font-size: 16px;
+    color: #473c23;
+    font-weight: 500;
+}
+
+.lists .navlink:hover .icon,
+.lists .navlink:hover .link{
+    color: wheat;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 1000vh;
+    width: 200%;
+    opacity: 0;
+    background: rgba(0, 0, 0, .3);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+nav.open ~ .overlay{
+    left: 260px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding-bottom: 3.5rem;
+    color: #443c2d;
+}
+
+.heading span{
+    color: var(--lightyellowbrown);
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 10rem;
+    padding-left: 18rem;
+    background-color: #443c2d;
+    background-image: url(../shop/homebg2.jpg);
+    background-attachment: fixed;
+    background-blend-mode:soft-light;
+    background-size: cover;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: white;
+}
+
+.home h1 span{
+    color:var(--lightyellowbrown);
+}
+
+.home h3{
+    font-size: 3rem;
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.home p{
+    font-size: 2rem;
+    color: white;
+    font-weight: 200;
+    padding-top: 7rem;
+    padding-left: 1rem;
+    padding-right: 7rem;
+}
+
+.menu{
+    background-color: #5f502f;
+}
+
+.menu h1{
+    font-size: 4rem;
+    color: white;
+    padding-top: 5rem;
+}
+
+.menu .square-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 20rem;
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.menu .square-container .square .price{
+    color: white;
+    font-size: 20px;
+    padding: .5rem 0;
+    text-align: center;
+}
+
+.menu .square-container .square .price span{
+    color: white;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.menu .square-container .square img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.menu .square-container .square h3{
+    padding: 5px;
+    text-align: center;
+    color: wheat;
+}
+
+.menu .square-container .square button{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: var(--lightyellowbrown);
+    color:#5f502f ;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all ;
+}
+
+.menu .square-container .square button:hover{
+    transform: scale(1.08);
+}
+
+.music{
+    background-color: #5f502f;
+}
+
+.music h1{
+    font-size: 4rem;
+    color: white;
+    padding-top: 5rem;
+}
+
+.music h3{
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.music .square-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20rem;
+    padding: 30px 150px;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    align-items: center;
+}
+
+.music .square-container .square:hover{
+    transform: scale(1.08);
+}
+
+
+.music .square-container .square button{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: var(--lightyellowbrown);
+    color:#5f502f ;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all ;
+}
+
+.music .square-container .square button:hover{
+    transform: scale(1.08);
+}
+
+.job{
+    background-color: #5f502f;
+}
+
+.job h1{
+    font-size: 4rem;
+    color: white;
+    padding-top: 5rem;
+}
+
+.job h3{
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.job p{
+    font-size: 1.5rem;
+    color: white;
+    text-align: left;
+    padding-left: 5rem ;
+}
+
+.job .square-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 20rem;
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.job .square-container .square .price{
+    color: white;
+    font-size: 20px;
+    padding: .5rem 0;
+    text-align: center;
+}
+
+.job .square-container .square .price span{
+    color: white;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.job .square-container .square img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.job .square-container .square h3{
+    padding: 5px;
+    text-align: center;
+    color: wheat;
+}
+
+.job .square-container .square button{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: var(--lightyellowbrown);
+    color:#5f502f ;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all ;
+}
+
+.job .square-container .square button:hover{
+    transform: scale(1.08);
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 10rem;
+    padding-left: 18rem;
+    background-color: #443c2d;
+    background-image: url(../shop/homebg2.jpg);
+    background-attachment: fixed;
+    background-blend-mode:soft-light;
+    background-size: cover;
+}
+
+.about h1{
+    font-size: 5rem;
+}
+
+.about h3{
+    font-size: 3rem;
+    color: white;
+    font-weight: 600;
+}
+
+.about h4{
+    font-size: 2rem;
+    color: white;
+    font-weight: 400;
+    padding-top: 3rem;
+}
+
+.about p{
+    text-indent: 10%;
+    font-size: 2rem;
+    color: white;
+    font-weight: 300;
+    padding-left: 1rem;
+    padding-right: 7rem;
+    padding-bottom: 3rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: black;
+}
+
+
+.socialmeds{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialmeds .foot-icon{
+    color: black;
+    font-size: 30px;
+}
+
+.footerbottom{
+    background: wheat;
+    width: 100vw;
+    height: 8vh;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.footerbottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+.footerbottom span{
+    opacity: .9;
+    font-weight: 200;
+}
